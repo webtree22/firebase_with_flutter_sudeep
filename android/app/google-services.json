@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1035779149337",
+    "firebase_url": "https://caplication.firebaseio.com",
+    "project_id": "caplication",
+    "storage_bucket": "caplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035779149337:android:90ba3d5898c2da4c05a488",
+        "android_client_info": {
+          "package_name": "com.example.flutter_with_firebase_sudeep"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035779149337-qc668re23h8d4o7bv4fimfk5psqt8a2j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfY6vEa9SdnQFAKMsE0Rl56glXME6jaTU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035779149337-qc668re23h8d4o7bv4fimfk5psqt8a2j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
