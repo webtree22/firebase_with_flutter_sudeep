@@ -7,7 +7,7 @@ import 'dart:ui';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -101,10 +101,10 @@ class _RegisterPetState extends State<RegisterPet> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(20.0),
             child: DropdownButtonFormField(
               value: dropdownValue,
-              icon: Icon(Icons.arrow_downward),
+              icon: const Icon(Icons.arrow_downward),
               decoration: InputDecoration(
                 labelText: "Select Pet Type",
                 enabledBorder: OutlineInputBorder(
@@ -112,9 +112,9 @@ class _RegisterPetState extends State<RegisterPet> {
                 ),
               ),
               items: listOfPets.map((String value) {
-                return new DropdownMenuItem<String>(
+                return DropdownMenuItem<String>(
                   value: value,
-                  child: new Text(value),
+                  child: Text(value),
                 );
               }).toList(),
               onChanged: (String? newValue) {
@@ -131,7 +131,7 @@ class _RegisterPetState extends State<RegisterPet> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(20.0),
             child: TextFormField(
               keyboardType: TextInputType.number,
               controller: ageController,
@@ -151,7 +151,7 @@ class _RegisterPetState extends State<RegisterPet> {
             ),
           ),
           Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(20.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
@@ -164,7 +164,8 @@ class _RegisterPetState extends State<RegisterPet> {
                           "type": dropdownValue
                         }).then((_) {
                           ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(content: Text('Successfully Added')));
+                              const SnackBar(
+                                  content: Text('Successfully Added')));
                           ageController.clear();
                           nameController.clear();
                         }).catchError((onError) {
@@ -173,7 +174,7 @@ class _RegisterPetState extends State<RegisterPet> {
                         });
                       }
                     },
-                    child: Text('Submit'),
+                    child: const Text('Submit'),
                   ),
                   ElevatedButton(
                     onPressed: () {
@@ -183,7 +184,7 @@ class _RegisterPetState extends State<RegisterPet> {
                             builder: (context) => Home(title: "Home Page")),
                       );
                     },
-                    child: Text('Navigate'),
+                    child: const Text('Navigate'),
                   ),
                 ],
               )),
